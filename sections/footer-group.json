@@ -14,16 +14,60 @@
     "rafvi-footer": {
       "type": "rafvi-footer",
       "blocks": {
-        "l1": { "type": "link", "settings": { "label": "Producto", "url": "#capacidades" } },
-        "l2": { "type": "link", "settings": { "label": "Soluciones", "url": "#casos-de-uso" } },
-        "l3": { "type": "link", "settings": { "label": "Cómo funciona", "url": "#como-funciona" } },
-        "l4": { "type": "link", "settings": { "label": "Integraciones", "url": "#integraciones" } },
-        "l5": { "type": "link", "settings": { "label": "FAQ", "url": "#faq" } },
-        "l6": { "type": "link", "settings": { "label": "Contacto", "url": "#solicitar-demo" } }
+        "l1": {
+          "type": "link",
+          "settings": {
+            "label": "Producto",
+            "url": "#capacidades"
+          }
+        },
+        "l2": {
+          "type": "link",
+          "settings": {
+            "label": "Soluciones",
+            "url": "#casos-de-uso"
+          }
+        },
+        "l3": {
+          "type": "link",
+          "settings": {
+            "label": "Cómo funciona",
+            "url": "#como-funciona"
+          }
+        },
+        "l4": {
+          "type": "link",
+          "settings": {
+            "label": "Integraciones",
+            "url": "#integraciones"
+          }
+        },
+        "l5": {
+          "type": "link",
+          "settings": {
+            "label": "FAQ",
+            "url": "#faq"
+          }
+        },
+        "l6": {
+          "type": "link",
+          "settings": {
+            "label": "Contacto",
+            "url": "#solicitar-demo"
+          }
+        }
       },
-      "block_order": ["l1", "l2", "l3", "l4", "l5", "l6"],
+      "block_order": [
+        "l1",
+        "l2",
+        "l3",
+        "l4",
+        "l5",
+        "l6"
+      ],
       "settings": {
-        "logo_height": 32,
+        "logo": "shopify://shop_images/ChatGPT_Image_9_sept_2026_22_51_37.png",
+        "logo_height": 60,
         "logo_text": "RAFVI IA LLC",
         "tagline": "Agentes de IA que automatizan llamadas, correos y mensajes para empresas.",
         "email": "",
@@ -31,5 +75,7 @@
       }
     }
   },
-  "order": ["rafvi-footer"]
+  "order": [
+    "rafvi-footer"
+  ]
 }
