@@ -30,6 +30,18 @@
       "block_order": ["c1", "c2", "c3", "c4", "c5", "c6"],
       "settings": {}
     },
+    "rafvi-image-feature": {
+      "type": "rafvi-image-feature",
+      "settings": {
+        "background": "soft",
+        "image_position": "right",
+        "eyebrow": "RAFVI en acción",
+        "heading": "Así se ve tu operación con RAFVI",
+        "text": "Sumá una imagen de tu producto, tu equipo o tu operación para mostrarle a tus clientes cómo trabaja RAFVI junto a tu empresa.",
+        "cta_label": "",
+        "cta_link": ""
+      }
+    },
     "rafvi-how-it-works": {
       "type": "rafvi-how-it-works",
       "blocks": {
@@ -143,6 +155,7 @@
     "rafvi-hero",
     "rafvi-benefits",
     "rafvi-capabilities",
+    "rafvi-image-feature",
     "rafvi-how-it-works",
     "rafvi-omnichannel",
     "rafvi-use-cases",

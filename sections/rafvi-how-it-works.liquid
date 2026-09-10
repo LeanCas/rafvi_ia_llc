@@ -1,6 +1,6 @@
 <section class="rafvi-section rafvi-bg-soft" id="como-funciona">
   <div class="rafvi-container">
-    <div class="rafvi-header">
+    <div class="rafvi-header rafvi-reveal">
       <span class="rafvi-eyebrow">Cómo funciona</span>
       <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
       {%- if section.settings.subheading != blank -%}
@@ -49,6 +49,9 @@
       { "type": "step", "settings": { "title": "Automatizá", "text": "RAFVI conversa con clientes y ejecuta tareas automáticamente." } },
       { "type": "step", "settings": { "title": "Supervisá", "text": "Tu equipo mantiene el control y recibe los casos que realmente requieren una persona." } }
     ]
-  }
+  },
+  "presets": [
+    { "name": "RAFVI · Cómo funciona" }
+  ]
 }
 {% endschema %}

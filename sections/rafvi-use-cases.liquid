@@ -1,6 +1,6 @@
 <section class="rafvi-section rafvi-bg-white" id="casos-de-uso">
   <div class="rafvi-container">
-    <div class="rafvi-header">
+    <div class="rafvi-header rafvi-reveal">
       <span class="rafvi-eyebrow">Casos de uso</span>
       <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
       {%- if section.settings.subheading != blank -%}
@@ -28,12 +28,12 @@
     </div>
 
     {%- if section.settings.industries_heading != blank -%}
-      <div class="rafvi-industries rafvi-reveal">
-        <h3 class="rafvi-industries__heading">{{ section.settings.industries_heading }}</h3>
+      <div class="rafvi-industries">
+        <h3 class="rafvi-industries__heading rafvi-reveal">{{ section.settings.industries_heading }}</h3>
         <div class="rafvi-chip-row">
           {%- for block in section.blocks -%}
             {%- if block.type == 'industry' -%}
-              <span class="rafvi-chip rafvi-chip--light" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
+              <span class="rafvi-chip rafvi-chip--light rafvi-reveal" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
             {%- endif -%}
           {%- endfor -%}
         </div>

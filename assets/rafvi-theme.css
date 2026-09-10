@@ -250,6 +250,12 @@ h2.rafvi-title {
   border-radius: var(--rafvi-radius-lg);
   padding: 32px;
   box-shadow: var(--rafvi-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rafvi-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(7, 30, 65, 0.14);
 }
 
 .rafvi-card__icon {
@@ -305,6 +311,12 @@ h2.rafvi-title {
   border: 1px solid var(--rafvi-border);
   border-radius: var(--rafvi-radius-lg);
   padding: 32px 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rafvi-step:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--rafvi-shadow);
 }
 
 .rafvi-step__number {
@@ -354,12 +366,23 @@ h2.rafvi-title {
   color: #fff;
   font-weight: 600;
   font-size: 1.5rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.rafvi-chip:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .rafvi-chip--light {
   background: var(--rafvi-bg-soft);
   border-color: var(--rafvi-border);
   color: var(--rafvi-text);
+}
+
+.rafvi-chip--light:hover {
+  background: var(--rafvi-blue-soft);
+  border-color: var(--rafvi-blue);
 }
 
 /* Checklist (human control) */
@@ -414,6 +437,12 @@ h2.rafvi-title {
   border-radius: var(--rafvi-radius-lg);
   padding: 28px;
   box-shadow: var(--rafvi-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rafvi-usecase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(7, 30, 65, 0.14);
 }
 
 .rafvi-usecase-card__title {
@@ -462,6 +491,30 @@ h2.rafvi-title {
   border-radius: var(--rafvi-radius-md);
   background: #fff;
   padding: 4px 24px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rafvi-faq-item:hover {
+  border-color: var(--rafvi-electric);
+}
+
+.rafvi-faq-item[open] {
+  box-shadow: var(--rafvi-shadow);
+}
+
+.rafvi-faq-item[open] p {
+  animation: rafviFadeIn 0.25s ease;
+}
+
+@keyframes rafviFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .rafvi-faq-item summary {
@@ -511,13 +564,61 @@ h2.rafvi-title {
 /* Reveal animation, respects reduced motion */
 .rafvi-reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--rafvi-reveal-delay, 0ms);
 }
 
 .rafvi-reveal.rafvi-in-view {
   opacity: 1;
   transform: none;
+}
+
+/* Staggered entrance for grouped items */
+.rafvi-grid > .rafvi-reveal:nth-child(1),
+.rafvi-steps > .rafvi-reveal:nth-child(1),
+.rafvi-chip-row > .rafvi-reveal:nth-child(1),
+.rafvi-checklist > .rafvi-reveal:nth-child(1),
+.rafvi-faq > .rafvi-reveal:nth-child(1) { transition-delay: 0ms; }
+
+.rafvi-grid > .rafvi-reveal:nth-child(2),
+.rafvi-steps > .rafvi-reveal:nth-child(2),
+.rafvi-chip-row > .rafvi-reveal:nth-child(2),
+.rafvi-checklist > .rafvi-reveal:nth-child(2),
+.rafvi-faq > .rafvi-reveal:nth-child(2) { transition-delay: 90ms; }
+
+.rafvi-grid > .rafvi-reveal:nth-child(3),
+.rafvi-steps > .rafvi-reveal:nth-child(3),
+.rafvi-chip-row > .rafvi-reveal:nth-child(3),
+.rafvi-checklist > .rafvi-reveal:nth-child(3),
+.rafvi-faq > .rafvi-reveal:nth-child(3) { transition-delay: 180ms; }
+
+.rafvi-grid > .rafvi-reveal:nth-child(4),
+.rafvi-steps > .rafvi-reveal:nth-child(4),
+.rafvi-chip-row > .rafvi-reveal:nth-child(4),
+.rafvi-checklist > .rafvi-reveal:nth-child(4),
+.rafvi-faq > .rafvi-reveal:nth-child(4) { transition-delay: 270ms; }
+
+.rafvi-grid > .rafvi-reveal:nth-child(5),
+.rafvi-steps > .rafvi-reveal:nth-child(5),
+.rafvi-chip-row > .rafvi-reveal:nth-child(5),
+.rafvi-checklist > .rafvi-reveal:nth-child(5),
+.rafvi-faq > .rafvi-reveal:nth-child(5) { transition-delay: 360ms; }
+
+.rafvi-grid > .rafvi-reveal:nth-child(6),
+.rafvi-steps > .rafvi-reveal:nth-child(6),
+.rafvi-chip-row > .rafvi-reveal:nth-child(6),
+.rafvi-checklist > .rafvi-reveal:nth-child(6),
+.rafvi-faq > .rafvi-reveal:nth-child(6) { transition-delay: 450ms; }
+
+.rafvi-grid > .rafvi-reveal:nth-child(n+7),
+.rafvi-chip-row > .rafvi-reveal:nth-child(n+7),
+.rafvi-faq > .rafvi-reveal:nth-child(n+7) { transition-delay: 520ms; }
+
+/* Section headers slide up slightly on entry */
+.rafvi-header.rafvi-reveal,
+.rafvi-header--left.rafvi-reveal {
+  transform: translateY(18px);
 }
 
 @media (prefers-reduced-motion: reduce) {

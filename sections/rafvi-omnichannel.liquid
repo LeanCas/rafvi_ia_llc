@@ -1,15 +1,15 @@
 <section class="rafvi-section rafvi-bg-gradient" id="canales">
   <div class="rafvi-container">
-    <div class="rafvi-header">
+    <div class="rafvi-header rafvi-reveal">
       <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
       {%- if section.settings.subheading != blank -%}
         <p class="rafvi-subtitle">{{ section.settings.subheading }}</p>
       {%- endif -%}
     </div>
 
-    <div class="rafvi-chip-row rafvi-reveal">
+    <div class="rafvi-chip-row">
       {%- for block in section.blocks -%}
-        <span class="rafvi-chip" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
+        <span class="rafvi-chip rafvi-reveal" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
       {%- endfor -%}
     </div>
   </div>

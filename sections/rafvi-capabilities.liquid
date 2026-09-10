@@ -1,6 +1,6 @@
 <section class="rafvi-section rafvi-bg-white" id="capacidades">
   <div class="rafvi-container">
-    <div class="rafvi-header">
+    <div class="rafvi-header rafvi-reveal">
       <span class="rafvi-eyebrow">Capacidades</span>
       <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
       {%- if section.settings.subheading != blank -%}
@@ -52,6 +52,9 @@
       { "type": "capability", "settings": { "title": "Agendamiento", "text": "Coordiná reuniones, reservas o turnos automáticamente.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='4' width='18' height='18' rx='2'/><path d='M16 2v4M8 2v4M3 10h18'/></svg>" } },
       { "type": "capability", "settings": { "title": "Soporte al cliente", "text": "Resolvé preguntas frecuentes y derivá los casos que necesitan intervención humana.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>" } }
     ]
-  }
+  },
+  "presets": [
+    { "name": "RAFVI · Capacidades" }
+  ]
 }
 {% endschema %}

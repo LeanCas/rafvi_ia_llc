@@ -1,6 +1,6 @@
 <section class="rafvi-section rafvi-bg-soft" id="beneficios">
   <div class="rafvi-container">
-    <div class="rafvi-header">
+    <div class="rafvi-header rafvi-reveal">
       <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
       {%- if section.settings.subheading != blank -%}
         <p class="rafvi-subtitle">{{ section.settings.subheading }}</p>
@@ -51,6 +51,9 @@
       { "type": "benefit", "settings": { "title": "Menos tareas repetitivas", "text": "Automatizá preguntas frecuentes, seguimientos y procesos operativos.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M17 2.1l4 4-4 4'/><path d='M3 12.2v-2a4 4 0 0 1 4-4h14'/><path d='M7 21.9l-4-4 4-4'/><path d='M21 11.8v2a4 4 0 0 1-4 4H3'/></svg>" } },
       { "type": "benefit", "settings": { "title": "Más oportunidades atendidas", "text": "Evitá perder leads por demoras, horarios o falta de capacidad.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z'/></svg>" } }
     ]
-  }
+  },
+  "presets": [
+    { "name": "RAFVI · Beneficios" }
+  ]
 }
 {% endschema %}
