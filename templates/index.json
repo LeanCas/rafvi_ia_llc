@@ -1,56 +1,8 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "featured_collection": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
-    "rafvi_hero_ngM6Y9": {
+    "rafvi-hero": {
       "type": "rafvi-hero",
-      "name": "RAFVI · Hero",
-      "settings": {
-        "badge": "Agentes de IA para empresas",
-        "heading": "Automatizá conversaciones. Escalá tu empresa.",
-        "text": "RAFVI conecta agentes de inteligencia artificial con llamadas, correos y mensajes para que tu empresa pueda responder más rápido, atender más clientes y operar 24/7.",
-        "primary_cta_label": "Solicitar demo",
-        "primary_cta_link": "",
-        "secondary_cta_label": "Ver cómo funciona",
-        "secondary_cta_link": "",
-        "microcopy": "Automatización personalizada para los canales y procesos de tu empresa."
-      }
+      "settings": {}
     },
     "rafvi-benefits": {
       "type": "rafvi-benefits",
@@ -178,24 +130,25 @@
     },
     "rafvi-demo-form": {
       "type": "rafvi-demo-form",
-      "name": "RAFVI · Solicitar demo",
-      "settings": {
-        "heading": "Solicitá una demo personalizada",
-        "text": "Contanos sobre tu empresa y te mostramos cómo un agente RAFVI puede automatizar tus llamadas, correos y mensajes.",
-        "submit_label": "Solicitar demo"
-      }
+      "settings": {}
     },
-    "rafvi_final_cta_p8ezfk": {
+    "rafvi-faq": {
+      "type": "rafvi-faq",
+      "blocks": {
+        "q1": { "type": "question", "settings": { "question": "¿Qué puede automatizar RAFVI?", "answer": "RAFVI puede ayudar a automatizar conversaciones y tareas relacionadas con llamadas, correos, mensajes, seguimiento, soporte y coordinación." } },
+        "q2": { "type": "question", "settings": { "question": "¿Puede derivar una conversación a una persona?", "answer": "Sí. El sistema puede diseñarse para escalar conversaciones cuando se necesita intervención humana." } },
+        "q3": { "type": "question", "settings": { "question": "¿Puede usar información de mi empresa?", "answer": "El agente puede configurarse utilizando información, procesos y reglas autorizadas por la empresa." } },
+        "q4": { "type": "question", "settings": { "question": "¿Puede trabajar fuera de horario?", "answer": "Sí. Uno de los principales beneficios de los agentes automatizados es poder responder de forma continua." } },
+        "q5": { "type": "question", "settings": { "question": "¿Se puede personalizar el tono de las respuestas?", "answer": "Sí. La comunicación puede configurarse para alinearse con la identidad y forma de atención de la empresa." } },
+        "q6": { "type": "question", "settings": { "question": "¿Se integra con mi CRM o herramientas actuales?", "answer": "Las integraciones dependerán del sistema utilizado y del alcance de implementación." } },
+        "q7": { "type": "question", "settings": { "question": "¿Cuánto tarda una implementación?", "answer": "El tiempo de implementación depende de los canales, integraciones y nivel de personalización necesarios." } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7"],
+      "settings": {}
+    },
+    "rafvi-final-cta": {
       "type": "rafvi-final-cta",
-      "name": "RAFVI · CTA final",
-      "settings": {
-        "heading": "Tu empresa no debería dejar conversaciones sin responder.",
-        "text": "Descubrí cómo RAFVI puede automatizar atención, seguimiento y comunicación sin perder el control de la experiencia.",
-        "primary_cta_label": "Solicitar demo",
-        "primary_cta_link": "",
-        "secondary_cta_label": "Hablar con RAFVI",
-        "secondary_cta_link": ""
-      }
+      "settings": {}
     }
   },
   "order": [
