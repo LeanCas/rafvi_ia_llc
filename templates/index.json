@@ -648,6 +648,74 @@
         "secondary_cta_label": "Hablar con RAFVI",
         "secondary_cta_link": ""
       }
+    },
+    "rafvi_human_control_iCM9hh": {
+      "type": "rafvi-human-control",
+      "blocks": {
+        "item_QhiLnn": {
+          "type": "item",
+          "settings": {
+            "label": "Tono de voz personalizado"
+          }
+        },
+        "item_aHEgVK": {
+          "type": "item",
+          "settings": {
+            "label": "Reglas de negocio"
+          }
+        },
+        "item_xwW6L7": {
+          "type": "item",
+          "settings": {
+            "label": "Reglas de escalamiento"
+          }
+        },
+        "item_Rm46c9": {
+          "type": "item",
+          "settings": {
+            "label": "Horarios de atención"
+          }
+        },
+        "item_YHL4pq": {
+          "type": "item",
+          "settings": {
+            "label": "Fuentes de conocimiento"
+          }
+        },
+        "item_PJyhbw": {
+          "type": "item",
+          "settings": {
+            "label": "Acciones permitidas y restringidas"
+          }
+        },
+        "item_KgVzDA": {
+          "type": "item",
+          "settings": {
+            "label": "Derivación a un humano"
+          }
+        },
+        "item_tiiUbH": {
+          "type": "item",
+          "settings": {
+            "label": "Historial de conversaciones"
+          }
+        }
+      },
+      "block_order": [
+        "item_QhiLnn",
+        "item_aHEgVK",
+        "item_xwW6L7",
+        "item_Rm46c9",
+        "item_YHL4pq",
+        "item_PJyhbw",
+        "item_KgVzDA",
+        "item_tiiUbH"
+      ],
+      "name": "RAFVI · Control humano",
+      "settings": {
+        "heading": "Automatización sin perder el control",
+        "text": "Definí cómo responde tu agente, qué información puede utilizar y cuándo debe intervenir una persona."
+      }
     }
   },
   "order": [
@@ -663,6 +731,7 @@
     "rafvi-security",
     "rafvi-demo-form",
     "rafvi-faq",
-    "rafvi-final-cta"
+    "rafvi-final-cta",
+    "rafvi_human_control_iCM9hh"
   ]
 }
