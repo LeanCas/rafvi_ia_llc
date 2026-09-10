@@ -8,7 +8,7 @@
       {%- endif -%}
     </div>
 
-    <div class="rafvi-grid rafvi-grid--3">
+    <div class="rafvi-grid">
       {%- for block in section.blocks -%}
         {%- if block.type == 'use_case' -%}
           {%- assign items = block.settings.items | newline_to_br | split: '<br />' -%}
@@ -42,18 +42,95 @@
   </div>
 </section>
 
-<style>
-  .rafvi-industries {
-    margin-top: 56px;
-    text-align: center;
-  }
-  .rafvi-industries__heading {
-    font-size: 1.9rem;
-    font-weight: 700;
-    color: var(--rafvi-text);
-    margin: 0 0 20px;
-  }
-</style>
+{% stylesheet %}
+.rafvi-usecase-card {
+  background: #fff;
+  border: 1px solid var(--rafvi-border);
+  border-radius: var(--rafvi-radius-lg);
+  padding: 28px 28px 24px;
+  box-shadow: var(--rafvi-shadow-sm);
+  transition: transform 0.22s var(--rafvi-ease), box-shadow 0.22s var(--rafvi-ease), border-color 0.22s ease;
+}
+.rafvi-usecase-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--rafvi-electric);
+  box-shadow: var(--rafvi-shadow);
+}
+.rafvi-usecase-card__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--rafvi-text);
+  margin: 0 0 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rafvi-border);
+}
+.rafvi-usecase-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+}
+.rafvi-usecase-card li {
+  font-size: 1.42rem;
+  font-weight: 500;
+  color: var(--rafvi-text-secondary);
+  padding-left: 24px;
+  position: relative;
+}
+.rafvi-usecase-card li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--rafvi-cyan);
+  transform: rotate(45deg);
+}
+
+.rafvi-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.rafvi-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.45rem;
+  transition: transform 0.2s var(--rafvi-ease), background 0.2s ease, border-color 0.2s ease;
+}
+.rafvi-chip--light {
+  background: #fff;
+  border: 1px solid var(--rafvi-border);
+  color: var(--rafvi-text);
+  box-shadow: var(--rafvi-shadow-sm);
+}
+.rafvi-chip--light:hover {
+  transform: translateY(-3px);
+  border-color: var(--rafvi-electric);
+  background: var(--rafvi-bg-soft);
+}
+
+.rafvi-industries {
+  margin-top: 56px;
+  text-align: center;
+}
+.rafvi-industries__heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--rafvi-text);
+  margin: 0 0 22px;
+}
+{% endstylesheet %}
 
 {% schema %}
 {

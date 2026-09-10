@@ -20,6 +20,77 @@
   </div>
 </section>
 
+{% stylesheet %}
+.rafvi-steps {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (min-width: 990px) {
+  .rafvi-steps::before {
+    content: '';
+    position: absolute;
+    top: 54px;
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--rafvi-border) 0 7px, transparent 7px 14px);
+    z-index: 0;
+  }
+}
+@media screen and (max-width: 989px) {
+  .rafvi-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 589px) {
+  .rafvi-steps { grid-template-columns: 1fr; }
+}
+
+.rafvi-step {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border: 1px solid var(--rafvi-border);
+  border-radius: var(--rafvi-radius-lg);
+  padding: 30px 26px 28px;
+  box-shadow: var(--rafvi-shadow-sm);
+  transition: transform 0.22s var(--rafvi-ease), box-shadow 0.22s var(--rafvi-ease);
+}
+.rafvi-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--rafvi-shadow);
+}
+.rafvi-step__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--rafvi-gradient-button);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+  box-shadow: 0 0 0 6px rgba(11, 142, 255, 0.1);
+}
+.rafvi-step__title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--rafvi-text);
+  margin: 0 0 8px;
+}
+.rafvi-step__text {
+  font-size: 1.48rem;
+  font-weight: 500;
+  line-height: 1.62;
+  color: var(--rafvi-text-secondary);
+  margin: 0;
+}
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "RAFVI · Cómo funciona",

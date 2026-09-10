@@ -16,6 +16,69 @@
   </div>
 </section>
 
+{% stylesheet %}
+.rafvi-faq {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+.rafvi-faq-item {
+  border: 1px solid var(--rafvi-border);
+  border-radius: var(--rafvi-radius-md);
+  background: #fff;
+  padding: 2px 26px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.rafvi-faq-item:hover { border-color: var(--rafvi-electric); }
+.rafvi-faq-item[open] {
+  box-shadow: var(--rafvi-shadow-sm);
+  border-color: var(--rafvi-electric);
+}
+.rafvi-faq-item[open] p { animation: rafviFadeIn 0.25s var(--rafvi-ease); }
+
+@keyframes rafviFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.rafvi-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 0;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--rafvi-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.rafvi-faq-item summary::-webkit-details-marker { display: none; }
+.rafvi-faq-item summary::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  border-right: 2px solid var(--rafvi-blue);
+  border-bottom: 2px solid var(--rafvi-blue);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.2s var(--rafvi-ease);
+}
+.rafvi-faq-item[open] summary::after {
+  transform: rotate(225deg) translate(-2px, -2px);
+}
+.rafvi-faq-item p {
+  margin: 0 0 22px;
+  font-size: 1.48rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--rafvi-text-secondary);
+  max-width: 62ch;
+}
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "RAFVI · FAQ",

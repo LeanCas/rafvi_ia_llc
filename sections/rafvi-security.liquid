@@ -18,11 +18,11 @@
   </div>
 </section>
 
-<style>
+{% stylesheet %}
   .rafvi-security-item {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     padding: 22px 24px;
     border-radius: var(--rafvi-radius-md);
     background: rgba(255, 255, 255, 0.06);
@@ -30,18 +30,30 @@
     color: #fff;
     font-size: 1.55rem;
     font-weight: 600;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .rafvi-security-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(20, 200, 245, 0.45);
   }
   .rafvi-security-item__icon {
     flex-shrink: 0;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--rafvi-radius-xs);
+    background: rgba(20, 200, 245, 0.12);
     color: var(--rafvi-cyan);
+    overflow: hidden;
   }
   .rafvi-security-item__icon svg {
-    width: 100%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
   }
-</style>
+{% endstylesheet %}
 
 {% schema %}
 {
