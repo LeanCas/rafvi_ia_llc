@@ -1,0 +1,44 @@
+<section class="rafvi-section rafvi-bg-gradient">
+  <div class="rafvi-container">
+    <div class="rafvi-final-cta rafvi-reveal">
+      <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}
+        <p class="rafvi-subtitle">{{ section.settings.text }}</p>
+      {%- endif -%}
+      <div class="rafvi-cta-row" style="justify-content:center;">
+        {%- if section.settings.primary_cta_label != blank -%}
+          <a href="{{ section.settings.primary_cta_link | default: '#solicitar-demo' }}" class="rafvi-btn rafvi-btn--primary">
+            {{ section.settings.primary_cta_label }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.secondary_cta_label != blank -%}
+          <a href="{{ section.settings.secondary_cta_link | default: '#solicitar-demo' }}" class="rafvi-btn rafvi-btn--secondary">
+            {{ section.settings.secondary_cta_label }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RAFVI · CTA final",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Encabezado", "default": "Tu empresa no debería dejar conversaciones sin responder." },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Descubrí cómo RAFVI puede automatizar atención, seguimiento y comunicación sin perder el control de la experiencia."
+    },
+    { "type": "text", "id": "primary_cta_label", "label": "CTA principal", "default": "Solicitar demo" },
+    { "type": "url", "id": "primary_cta_link", "label": "Link CTA principal" },
+    { "type": "text", "id": "secondary_cta_label", "label": "CTA secundaria", "default": "Hablar con RAFVI" },
+    { "type": "url", "id": "secondary_cta_link", "label": "Link CTA secundaria" }
+  ],
+  "presets": [
+    { "name": "RAFVI · CTA final" }
+  ]
+}
+{% endschema %}

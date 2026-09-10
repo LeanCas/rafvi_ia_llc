@@ -1,0 +1,109 @@
+{{ 'rafvi-hero.css' | asset_url | stylesheet_tag }}
+
+<section class="rafvi-hero rafvi-bg-white" id="{{ section.id }}">
+  <div class="rafvi-container rafvi-hero__grid">
+    <div class="rafvi-hero__content rafvi-reveal">
+      {%- if section.settings.badge != blank -%}
+        <span class="rafvi-badge">{{ section.settings.badge }}</span>
+      {%- endif -%}
+
+      <h1 class="rafvi-title">{{ section.settings.heading }}</h1>
+
+      {%- if section.settings.text != blank -%}
+        <p class="rafvi-subtitle">{{ section.settings.text }}</p>
+      {%- endif -%}
+
+      <div class="rafvi-cta-row">
+        {%- if section.settings.primary_cta_label != blank -%}
+          <a href="{{ section.settings.primary_cta_link | default: '#solicitar-demo' }}" class="rafvi-btn rafvi-btn--primary">
+            {{ section.settings.primary_cta_label }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.secondary_cta_label != blank -%}
+          <a href="{{ section.settings.secondary_cta_link | default: '#como-funciona' }}" class="rafvi-btn rafvi-btn--secondary">
+            {{ section.settings.secondary_cta_label }}
+          </a>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.microcopy != blank -%}
+        <p class="rafvi-microcopy">{{ section.settings.microcopy }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="rafvi-hero__visual rafvi-reveal" aria-hidden="true">
+      <div class="rafvi-console">
+        <div class="rafvi-console__bar">
+          <i></i><i></i><i></i>
+          <span class="rafvi-console__bar-title">RAFVI &middot; Panel de conversaciones</span>
+          <span class="rafvi-console__live"><b></b> En vivo</span>
+        </div>
+        <div class="rafvi-console__body">
+          <div class="rafvi-console__row">
+            <div class="rafvi-console__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="rafvi-console__text">
+              <span class="rafvi-console__sender">Llamada entrante &middot; Cliente</span>
+              <span class="rafvi-console__snippet">&ldquo;Quería consultar disponibilidad de turnos.&rdquo;</span>
+            </div>
+            <span class="rafvi-console__status">Atendido</span>
+          </div>
+
+          <div class="rafvi-console__row">
+            <div class="rafvi-console__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+            </div>
+            <div class="rafvi-console__text">
+              <span class="rafvi-console__sender">Email &middot; Lead nuevo</span>
+              <span class="rafvi-console__snippet">&ldquo;Me gustaría recibir más información.&rdquo;</span>
+            </div>
+            <span class="rafvi-console__status">Respondido</span>
+          </div>
+
+          <div class="rafvi-console__typing">
+            <div class="rafvi-console__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <span class="rafvi-console__typing-label">WhatsApp &middot; el agente está respondiendo</span>
+            <span class="rafvi-console__dots"><span></span><span></span><span></span></span>
+          </div>
+        </div>
+        <div class="rafvi-console__footer">
+          <b></b>
+          Agente RAFVI activo
+          <span class="rafvi-console__metric">Con supervisión humana</span>
+        </div>
+      </div>
+
+      <div class="rafvi-hero__float">
+        <span class="rafvi-hero__float-num">24/7</span>
+        <span class="rafvi-hero__float-label">Atención<br>continua</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RAFVI · Hero",
+  "settings": [
+    { "type": "text", "id": "badge", "label": "Badge", "default": "Agentes de IA para empresas" },
+    { "type": "text", "id": "heading", "label": "Encabezado", "default": "Automatizá conversaciones. Escalá tu empresa." },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto de apoyo",
+      "default": "RAFVI conecta agentes de inteligencia artificial con llamadas, correos y mensajes para que tu empresa pueda responder más rápido, atender más clientes y operar 24/7."
+    },
+    { "type": "text", "id": "primary_cta_label", "label": "CTA principal", "default": "Solicitar demo" },
+    { "type": "url", "id": "primary_cta_link", "label": "Link CTA principal" },
+    { "type": "text", "id": "secondary_cta_label", "label": "CTA secundaria", "default": "Ver cómo funciona" },
+    { "type": "url", "id": "secondary_cta_link", "label": "Link CTA secundaria" },
+    { "type": "text", "id": "microcopy", "label": "Microcopy", "default": "Automatización personalizada para los canales y procesos de tu empresa." }
+  ],
+  "presets": [
+    { "name": "RAFVI · Hero" }
+  ]
+}
+{% endschema %}

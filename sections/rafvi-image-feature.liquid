@@ -62,11 +62,11 @@
     position: absolute;
     inset: 0;
     margin: auto;
-    width: 70%;
-    height: 70%;
+    width: 58%;
+    height: 58%;
     background: var(--rafvi-gradient);
-    filter: blur(70px);
-    opacity: 0.22;
+    filter: blur(90px);
+    opacity: 0.12;
     border-radius: 50%;
     z-index: 0;
   }
@@ -88,21 +88,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 18px;
     width: 100%;
-    height: 320px;
-    border: 1px dashed var(--rafvi-border);
-    border-radius: var(--rafvi-radius-lg);
+    height: 340px;
+    border: 1px solid var(--rafvi-border);
+    border-radius: var(--rafvi-radius-xl);
+    background: linear-gradient(160deg, var(--rafvi-bg-soft), #fff);
+    box-shadow: var(--rafvi-shadow);
     color: var(--rafvi-text-secondary);
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 600;
     text-align: center;
-    padding: 24px;
+    padding: 32px;
   }
   .rafvi-image-feature__placeholder svg {
-    width: 40px;
-    height: 40px;
-    opacity: 0.5;
+    width: 44px;
+    height: 44px;
+    padding: 14px;
+    border-radius: var(--rafvi-radius-md);
+    background: #fff;
+    border: 1px solid var(--rafvi-border);
+    color: var(--rafvi-blue);
+    box-sizing: content-box;
+    opacity: 1;
   }
 </style>
 
