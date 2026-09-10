@@ -38,15 +38,6 @@
         "padding_bottom": 36
       }
     },
-    "rafvi_demo_form_nG3Wf4": {
-      "type": "rafvi-demo-form",
-      "name": "RAFVI · Solicitar demo",
-      "settings": {
-        "heading": "Solicitá una demo personalizada",
-        "text": "Contanos sobre tu empresa y te mostramos cómo un agente RAFVI puede automatizar tus llamadas, correos y mensajes.",
-        "submit_label": "Solicitar demo"
-      }
-    },
     "rafvi_benefits_Fp6phx": {
       "type": "rafvi-benefits",
       "blocks": {
@@ -413,6 +404,15 @@
         "subheading": "Centralizá llamadas, correos y mensajes en una experiencia coherente para tu empresa y tus clientes."
       }
     },
+    "rafvi_demo_form_nG3Wf4": {
+      "type": "rafvi-demo-form",
+      "name": "RAFVI · Solicitar demo",
+      "settings": {
+        "heading": "Solicitá una demo personalizada",
+        "text": "Contanos sobre tu empresa y te mostramos cómo un agente RAFVI puede automatizar tus llamadas, correos y mensajes.",
+        "submit_label": "Solicitar demo"
+      }
+    },
     "rafvi_faq_xMijxF": {
       "type": "rafvi-faq",
       "blocks": {
@@ -483,13 +483,13 @@
   },
   "order": [
     "featured_collection",
-    "rafvi_demo_form_nG3Wf4",
     "rafvi_benefits_Fp6phx",
     "rafvi_capabilities_z7BgKH",
     "rafvi_human_control_cacNJw",
     "rafvi_how_it_works_x8EVDz",
     "rafvi_security_PA7Rqx",
     "rafvi_omnichannel_cNEVe7",
+    "rafvi_demo_form_nG3Wf4",
     "rafvi_faq_xMijxF"
   ]
 }
