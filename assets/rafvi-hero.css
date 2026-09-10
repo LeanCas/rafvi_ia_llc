@@ -1,0 +1,142 @@
+.rafvi-hero {
+  padding: 96px 0 80px;
+}
+
+.rafvi-hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+@media screen and (max-width: 989px) {
+  .rafvi-hero {
+    padding: 56px 0;
+  }
+  .rafvi-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .rafvi-hero__visual {
+    order: -1;
+  }
+}
+
+.rafvi-hero__content .rafvi-cta-row {
+  justify-content: flex-start;
+}
+
+/* Inbox mockup */
+.rafvi-inbox {
+  background: #fff;
+  border: 1px solid var(--rafvi-border);
+  border-radius: var(--rafvi-radius-lg);
+  box-shadow: 0 30px 60px rgba(7, 30, 65, 0.14);
+  overflow: hidden;
+}
+
+.rafvi-inbox__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 20px;
+  background: var(--rafvi-bg-soft);
+  border-bottom: 1px solid var(--rafvi-border);
+}
+
+.rafvi-inbox__bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rafvi-border);
+}
+
+.rafvi-inbox__bar-title {
+  margin-left: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--rafvi-text-secondary);
+}
+
+.rafvi-inbox__body {
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.rafvi-inbox__row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: var(--rafvi-radius-md);
+  background: var(--rafvi-bg-soft);
+}
+
+.rafvi-inbox__icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--rafvi-blue);
+}
+
+.rafvi-inbox__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.rafvi-inbox__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.rafvi-inbox__sender {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--rafvi-text);
+}
+
+.rafvi-inbox__snippet {
+  font-size: 1.3rem;
+  color: var(--rafvi-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rafvi-inbox__status {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--rafvi-blue);
+  background: var(--rafvi-blue-soft);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.rafvi-inbox__footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--rafvi-border);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--rafvi-text-secondary);
+}
+
+.rafvi-inbox__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rafvi-cyan);
+  box-shadow: 0 0 0 4px rgba(20, 200, 245, 0.2);
+}

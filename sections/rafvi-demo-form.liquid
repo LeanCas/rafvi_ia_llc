@@ -1,0 +1,124 @@
+<section class="rafvi-section rafvi-bg-white" id="solicitar-demo">
+  <div class="rafvi-container">
+    <div class="rafvi-columns">
+      <div class="rafvi-reveal">
+        <span class="rafvi-eyebrow">Solicitar demo</span>
+        <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
+        {%- if section.settings.text != blank -%}
+          <p class="rafvi-subtitle" style="text-align:left;">{{ section.settings.text }}</p>
+        {%- endif -%}
+      </div>
+
+      <div class="rafvi-demo-form rafvi-reveal">
+        {%- form 'contact', id: 'RafviContactForm' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="rafvi-demo-form__success">
+              {{ 'templates.contact.form.post_success' | t }}
+            </p>
+          {%- endif -%}
+          {%- if form.errors -%}
+            <ul class="rafvi-demo-form__error">
+              {%- for field in form.errors -%}
+                <li>{{ form.errors.translated_fields[field] | capitalize }} {{ form.errors.messages[field] }}</li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          <div class="rafvi-demo-form__field">
+            <label for="ContactFormName">Nombre</label>
+            <input type="text" id="ContactFormName" name="contact[{{ 'templates.contact.form.name' | t }}]" autocomplete="name" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+          </div>
+
+          <div class="rafvi-demo-form__field">
+            <label for="ContactFormEmail">Email</label>
+            <input
+              type="email"
+              id="ContactFormEmail"
+              name="contact[email]"
+              autocomplete="email"
+              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+              required
+            >
+          </div>
+
+          <div class="rafvi-demo-form__field">
+            <label for="ContactFormPhone">Teléfono</label>
+            <input type="tel" id="ContactFormPhone" name="contact[{{ 'templates.contact.form.phone' | t }}]" autocomplete="tel" value="{% if form.phone %}{{ form.phone }}{% endif %}">
+          </div>
+
+          <div class="rafvi-demo-form__field">
+            <label for="ContactFormMessage">Contanos sobre tu empresa</label>
+            <textarea id="ContactFormMessage" name="contact[{{ 'templates.contact.form.comment' | t }}]" rows="4">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+          </div>
+
+          <button type="submit" class="rafvi-btn rafvi-btn--primary rafvi-demo-form__submit">
+            {{ section.settings.submit_label }}
+          </button>
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .rafvi-demo-form {
+    background: var(--rafvi-bg-soft);
+    border: 1px solid var(--rafvi-border);
+    border-radius: var(--rafvi-radius-lg);
+    padding: 32px;
+  }
+  .rafvi-demo-form__field {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .rafvi-demo-form__field label {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--rafvi-text);
+  }
+  .rafvi-demo-form__field input,
+  .rafvi-demo-form__field textarea {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    padding: 12px 16px;
+    border-radius: var(--rafvi-radius-sm);
+    border: 1px solid var(--rafvi-border);
+    background: #fff;
+    color: var(--rafvi-text);
+  }
+  .rafvi-demo-form__submit {
+    width: 100%;
+    border: none;
+  }
+  .rafvi-demo-form__success {
+    color: var(--rafvi-blue);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .rafvi-demo-form__error {
+    color: #c0392b;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "RAFVI · Solicitar demo",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Encabezado", "default": "Solicitá una demo personalizada" },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Contanos sobre tu empresa y te mostramos cómo un agente RAFVI puede automatizar tus llamadas, correos y mensajes."
+    },
+    { "type": "text", "id": "submit_label", "label": "Texto del botón", "default": "Solicitar demo" }
+  ],
+  "presets": [
+    { "name": "RAFVI · Solicitar demo" }
+  ]
+}
+{% endschema %}

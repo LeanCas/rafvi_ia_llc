@@ -1,0 +1,53 @@
+<section class="rafvi-section rafvi-bg-gradient" id="canales">
+  <div class="rafvi-container">
+    <div class="rafvi-header">
+      <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}
+        <p class="rafvi-subtitle">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="rafvi-chip-row rafvi-reveal">
+      {%- for block in section.blocks -%}
+        <span class="rafvi-chip" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RAFVI · Omnicanal",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Encabezado", "default": "Una sola inteligencia. Múltiples canales." },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subtítulo",
+      "default": "Centralizá llamadas, correos y mensajes en una experiencia coherente para tu empresa y tus clientes."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "channel",
+      "name": "Canal",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Nombre", "default": "Teléfono" }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "channel", "settings": { "label": "Teléfono" } },
+      { "type": "channel", "settings": { "label": "Email" } },
+      { "type": "channel", "settings": { "label": "WhatsApp" } },
+      { "type": "channel", "settings": { "label": "Web Chat" } },
+      { "type": "channel", "settings": { "label": "SMS" } },
+      { "type": "channel", "settings": { "label": "CRM" } }
+    ]
+  },
+  "presets": [
+    { "name": "RAFVI · Omnicanal" }
+  ]
+}
+{% endschema %}

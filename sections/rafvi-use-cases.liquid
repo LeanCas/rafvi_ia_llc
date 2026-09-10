@@ -1,0 +1,103 @@
+<section class="rafvi-section rafvi-bg-white" id="casos-de-uso">
+  <div class="rafvi-container">
+    <div class="rafvi-header">
+      <span class="rafvi-eyebrow">Casos de uso</span>
+      <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}
+        <p class="rafvi-subtitle">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="rafvi-grid rafvi-grid--3">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'use_case' -%}
+          {%- assign items = block.settings.items | newline_to_br | split: '<br />' -%}
+          <div class="rafvi-usecase-card rafvi-reveal" {{ block.shopify_attributes }}>
+            <h3 class="rafvi-usecase-card__title">{{ block.settings.title }}</h3>
+            <ul>
+              {%- for item in items -%}
+                {%- assign trimmed_item = item | strip -%}
+                {%- if trimmed_item != blank -%}
+                  <li>{{ trimmed_item }}</li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.industries_heading != blank -%}
+      <div class="rafvi-industries rafvi-reveal">
+        <h3 class="rafvi-industries__heading">{{ section.settings.industries_heading }}</h3>
+        <div class="rafvi-chip-row">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'industry' -%}
+              <span class="rafvi-chip rafvi-chip--light" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  .rafvi-industries {
+    margin-top: 56px;
+    text-align: center;
+  }
+  .rafvi-industries__heading {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--rafvi-text);
+    margin: 0 0 20px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "RAFVI · Casos de uso",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Encabezado", "default": "Automatización que se adapta a tu operación" },
+    { "type": "textarea", "id": "subheading", "label": "Subtítulo", "default": "" },
+    { "type": "text", "id": "industries_heading", "label": "Encabezado de industrias", "default": "Diseñado para empresas donde cada conversación importa." }
+  ],
+  "blocks": [
+    {
+      "type": "use_case",
+      "name": "Área",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Título", "default": "Ventas" },
+        { "type": "textarea", "id": "items", "label": "Ítems (uno por línea)", "default": "Calificación de leads\nContacto inicial\nSeguimiento\nAgendamiento" }
+      ]
+    },
+    {
+      "type": "industry",
+      "name": "Industria",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Nombre", "default": "Ecommerce" }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "use_case", "settings": { "title": "Ventas", "items": "Calificación de leads\nContacto inicial\nSeguimiento\nAgendamiento" } },
+      { "type": "use_case", "settings": { "title": "Soporte al cliente", "items": "Preguntas frecuentes\nEstado de pedidos o solicitudes\nEscalamiento\nEntrega de información" } },
+      { "type": "use_case", "settings": { "title": "Recepción", "items": "Atención de llamadas\nCoordinación de turnos\nConsultas generales" } },
+      { "type": "use_case", "settings": { "title": "Cobranzas", "items": "Recordatorios de pago\nSeguimiento\nNotificaciones a clientes" } },
+      { "type": "use_case", "settings": { "title": "Operaciones internas", "items": "Flujos de comunicación repetitivos\nNotificaciones\nRuteo de información" } },
+      { "type": "industry", "settings": { "label": "Ecommerce" } },
+      { "type": "industry", "settings": { "label": "Clínicas" } },
+      { "type": "industry", "settings": { "label": "Inmobiliarias" } },
+      { "type": "industry", "settings": { "label": "Estudios profesionales" } },
+      { "type": "industry", "settings": { "label": "Restaurantes" } },
+      { "type": "industry", "settings": { "label": "Servicios" } },
+      { "type": "industry", "settings": { "label": "Concesionarias" } }
+    ]
+  },
+  "presets": [
+    { "name": "RAFVI · Casos de uso" }
+  ]
+}
+{% endschema %}

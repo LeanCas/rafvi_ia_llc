@@ -1,0 +1,56 @@
+<section class="rafvi-section rafvi-bg-soft" id="beneficios">
+  <div class="rafvi-container">
+    <div class="rafvi-header">
+      <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}
+        <p class="rafvi-subtitle">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="rafvi-grid">
+      {%- for block in section.blocks -%}
+        <div class="rafvi-card rafvi-reveal" {{ block.shopify_attributes }}>
+          <div class="rafvi-card__icon">{{ block.settings.icon }}</div>
+          <h3 class="rafvi-card__title">{{ block.settings.title }}</h3>
+          <p class="rafvi-card__text">{{ block.settings.text }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RAFVI · Beneficios",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Encabezado", "default": "Más conversaciones atendidas. Menos trabajo repetitivo." },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subtítulo",
+      "default": "Automatizá las interacciones que consumen tiempo y dejá a tu equipo ocuparse de lo que realmente necesita criterio humano."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Beneficio",
+      "settings": [
+        { "type": "html", "id": "icon", "label": "Icono (SVG)", "default": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='9'/><path d='M12 7v5l3 3'/></svg>" },
+        { "type": "text", "id": "title", "label": "Título", "default": "Atención 24/7" },
+        { "type": "textarea", "id": "text", "label": "Texto", "default": "Respondé consultas incluso cuando tu equipo no está disponible." }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "benefit", "settings": { "title": "Atención 24/7", "text": "Respondé consultas incluso cuando tu equipo no está disponible.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='9'/><path d='M12 7v5l3 3'/></svg>" } },
+      { "type": "benefit", "settings": { "title": "Respuestas instantáneas", "text": "Reducí tiempos de espera y mantené conversaciones activas con tus clientes.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M13 2 3 14h7l-1 8 10-12h-7z'/></svg>" } },
+      { "type": "benefit", "settings": { "title": "Escalabilidad", "text": "Atendé más contactos sin aumentar proporcionalmente el tamaño del equipo.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M3 3v18h18'/><path d='M7 15l4-4 3 3 5-6'/></svg>" } },
+      { "type": "benefit", "settings": { "title": "Consistencia", "text": "Mantené respuestas alineadas con las reglas, procesos y tono de tu empresa.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M9 12l2 2 4-4'/><circle cx='12' cy='12' r='9'/></svg>" } },
+      { "type": "benefit", "settings": { "title": "Menos tareas repetitivas", "text": "Automatizá preguntas frecuentes, seguimientos y procesos operativos.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M17 2.1l4 4-4 4'/><path d='M3 12.2v-2a4 4 0 0 1 4-4h14'/><path d='M7 21.9l-4-4 4-4'/><path d='M21 11.8v2a4 4 0 0 1-4 4H3'/></svg>" } },
+      { "type": "benefit", "settings": { "title": "Más oportunidades atendidas", "text": "Evitá perder leads por demoras, horarios o falta de capacidad.", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z'/></svg>" } }
+    ]
+  }
+}
+{% endschema %}

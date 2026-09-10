@@ -1,0 +1,83 @@
+<section class="rafvi-section rafvi-bg-navy" id="seguridad">
+  <div class="rafvi-container">
+    <div class="rafvi-header">
+      <h2 class="rafvi-title">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}
+        <p class="rafvi-subtitle">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="rafvi-grid">
+      {%- for block in section.blocks -%}
+        <div class="rafvi-security-item rafvi-reveal" {{ block.shopify_attributes }}>
+          <div class="rafvi-security-item__icon">{{ block.settings.icon }}</div>
+          <span>{{ block.settings.label }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  .rafvi-security-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 24px;
+    border-radius: var(--rafvi-radius-md);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-size: 1.55rem;
+    font-weight: 600;
+  }
+  .rafvi-security-item__icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    color: var(--rafvi-cyan);
+  }
+  .rafvi-security-item__icon svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "RAFVI · Seguridad",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Encabezado", "default": "IA para empresas, con control y seguridad" },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subtítulo",
+      "default": "Diseñá reglas, permisos y flujos claros para mantener cada automatización alineada con tu operación."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "topic",
+      "name": "Tema",
+      "settings": [
+        { "type": "html", "id": "icon", "label": "Icono (SVG)", "default": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6z'/></svg>" },
+        { "type": "text", "id": "label", "label": "Texto", "default": "Acceso controlado" }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "topic", "settings": { "label": "Acceso controlado", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg>" } },
+      { "type": "topic", "settings": { "label": "Permisos configurables", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6z'/></svg>" } },
+      { "type": "topic", "settings": { "label": "Historial de conversaciones", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='9'/><path d='M12 7v5l3 3'/></svg>" } },
+      { "type": "topic", "settings": { "label": "Infraestructura segura", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='4' y='4' width='16' height='16' rx='3'/><path d='m9 12 2 2 4-4'/></svg>" } },
+      { "type": "topic", "settings": { "label": "Reglas de negocio", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 4h16v16H4z'/><path d='M8 9h8M8 13h8M8 17h5'/></svg>" } },
+      { "type": "topic", "settings": { "label": "Protección de datos", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6z'/><path d='M9.5 12l1.8 1.8L15 10'/></svg>" } },
+      { "type": "topic", "settings": { "label": "Supervisión humana", "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='8' r='4'/><path d='M4 21a8 8 0 0 1 16 0'/></svg>" } }
+    ]
+  },
+  "presets": [
+    { "name": "RAFVI · Seguridad" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,529 @@
+/* RAFVI IA LLC — design tokens and shared component styles */
+
+:root {
+  --rafvi-navy: #071E41;
+  --rafvi-blue: #075BD8;
+  --rafvi-electric: #0B8EFF;
+  --rafvi-cyan: #14C8F5;
+
+  --rafvi-bg: #FFFFFF;
+  --rafvi-bg-soft: #F5FAFF;
+  --rafvi-blue-soft: #EAF5FF;
+
+  --rafvi-text: #0B1525;
+  --rafvi-text-secondary: #66758A;
+  --rafvi-border: #DCE8F3;
+
+  --rafvi-radius-sm: 12px;
+  --rafvi-radius-md: 16px;
+  --rafvi-radius-lg: 24px;
+
+  --rafvi-shadow: 0 16px 40px rgba(7, 30, 65, 0.08);
+
+  --rafvi-gradient: linear-gradient(135deg, #071E41 0%, #075BD8 45%, #0B8EFF 72%, #14C8F5 100%);
+  --rafvi-gradient-button: linear-gradient(135deg, #075BD8, #0B8EFF);
+  --rafvi-gradient-button-hover: linear-gradient(135deg, #064CB8, #14C8F5);
+
+  /* Use Manrope across the entire site, overriding Dawn's font pickers */
+  --font-body-family: 'Manrope', sans-serif;
+  --font-heading-family: 'Manrope', sans-serif;
+}
+
+.rafvi-section {
+  padding: 80px 0;
+}
+
+@media screen and (max-width: 749px) {
+  .rafvi-section {
+    padding: 56px 0;
+  }
+}
+
+.rafvi-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media screen and (max-width: 749px) {
+  .rafvi-container {
+    padding: 0 20px;
+  }
+}
+
+.rafvi-bg-white { background: var(--rafvi-bg); }
+.rafvi-bg-soft { background: var(--rafvi-bg-soft); }
+.rafvi-bg-blue-soft { background: var(--rafvi-blue-soft); }
+.rafvi-bg-navy { background: var(--rafvi-navy); color: #fff; }
+.rafvi-bg-blue { background: var(--rafvi-blue); color: #fff; }
+.rafvi-bg-gradient { background: var(--rafvi-gradient); color: #fff; }
+
+.rafvi-header {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.rafvi-header--left {
+  margin: 0 0 48px;
+  text-align: left;
+  max-width: 640px;
+}
+
+.rafvi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--rafvi-blue-soft);
+  color: var(--rafvi-blue);
+  margin-bottom: 20px;
+}
+
+.rafvi-bg-navy .rafvi-badge,
+.rafvi-bg-blue .rafvi-badge,
+.rafvi-bg-gradient .rafvi-badge {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.rafvi-eyebrow {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rafvi-blue);
+  margin-bottom: 12px;
+}
+
+.rafvi-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--rafvi-text);
+  margin: 0 0 16px;
+  font-size: clamp(2.8rem, 4.2vw, 4.4rem);
+}
+
+h2.rafvi-title {
+  font-size: clamp(2.4rem, 3.2vw, 3.6rem);
+}
+
+.rafvi-bg-navy .rafvi-title,
+.rafvi-bg-blue .rafvi-title,
+.rafvi-bg-gradient .rafvi-title {
+  color: #fff;
+}
+
+.rafvi-subtitle {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--rafvi-text-secondary);
+  margin: 0;
+}
+
+.rafvi-bg-navy .rafvi-subtitle,
+.rafvi-bg-blue .rafvi-subtitle,
+.rafvi-bg-gradient .rafvi-subtitle {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.rafvi-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.rafvi-header .rafvi-cta-row,
+.rafvi-header--left .rafvi-cta-row {
+  justify-content: inherit;
+}
+
+.rafvi-header .rafvi-cta-row {
+  justify-content: center;
+}
+
+.rafvi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: var(--rafvi-radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  line-height: 1;
+}
+
+.rafvi-btn:hover {
+  transform: translateY(-2px);
+}
+
+.rafvi-btn--primary {
+  background: var(--rafvi-gradient-button);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(7, 91, 216, 0.28);
+}
+
+.rafvi-btn--primary:hover {
+  background: var(--rafvi-gradient-button-hover);
+  color: #fff;
+}
+
+.rafvi-btn--secondary {
+  background: transparent;
+  color: var(--rafvi-blue);
+  border-color: var(--rafvi-border);
+}
+
+.rafvi-btn--secondary:hover {
+  color: var(--rafvi-blue);
+  border-color: var(--rafvi-blue);
+}
+
+.rafvi-bg-navy .rafvi-btn--secondary,
+.rafvi-bg-blue .rafvi-btn--secondary,
+.rafvi-bg-gradient .rafvi-btn--secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.rafvi-bg-navy .rafvi-btn--secondary:hover,
+.rafvi-bg-blue .rafvi-btn--secondary:hover,
+.rafvi-bg-gradient .rafvi-btn--secondary:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.rafvi-microcopy {
+  font-size: 1.4rem;
+  color: var(--rafvi-text-secondary);
+  margin-top: 16px;
+}
+
+.rafvi-bg-navy .rafvi-microcopy,
+.rafvi-bg-blue .rafvi-microcopy,
+.rafvi-bg-gradient .rafvi-microcopy {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Card grid */
+.rafvi-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.rafvi-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.rafvi-grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+@media screen and (max-width: 989px) {
+  .rafvi-grid,
+  .rafvi-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 589px) {
+  .rafvi-grid,
+  .rafvi-grid--2,
+  .rafvi-grid--4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rafvi-card {
+  background: #fff;
+  border: 1px solid var(--rafvi-border);
+  border-radius: var(--rafvi-radius-lg);
+  padding: 32px;
+  box-shadow: var(--rafvi-shadow);
+}
+
+.rafvi-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--rafvi-radius-sm);
+  background: var(--rafvi-blue-soft);
+  color: var(--rafvi-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.rafvi-card__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.rafvi-card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--rafvi-text);
+  margin: 0 0 10px;
+}
+
+.rafvi-card__text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--rafvi-text-secondary);
+  margin: 0;
+}
+
+/* Steps */
+.rafvi-steps {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  counter-reset: rafvi-step;
+}
+
+@media screen and (max-width: 989px) {
+  .rafvi-steps { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 589px) {
+  .rafvi-steps { grid-template-columns: 1fr; }
+}
+
+.rafvi-step {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--rafvi-border);
+  border-radius: var(--rafvi-radius-lg);
+  padding: 32px 28px;
+}
+
+.rafvi-step__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--rafvi-gradient-button);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.rafvi-step__title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--rafvi-text);
+  margin: 0 0 8px;
+}
+
+.rafvi-step__text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--rafvi-text-secondary);
+  margin: 0;
+}
+
+/* Badges / chips (channels, industries) */
+.rafvi-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.rafvi-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.rafvi-chip--light {
+  background: var(--rafvi-bg-soft);
+  border-color: var(--rafvi-border);
+  color: var(--rafvi-text);
+}
+
+/* Checklist (human control) */
+.rafvi-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 589px) {
+  .rafvi-checklist { grid-template-columns: 1fr; }
+}
+
+.rafvi-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1.5rem;
+  color: var(--rafvi-text);
+}
+
+.rafvi-checklist svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--rafvi-cyan);
+  margin-top: 2px;
+}
+
+/* Two column layout */
+.rafvi-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+@media screen and (max-width: 989px) {
+  .rafvi-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Use case tabs/groups */
+.rafvi-usecase-card {
+  background: #fff;
+  border: 1px solid var(--rafvi-border);
+  border-radius: var(--rafvi-radius-lg);
+  padding: 28px;
+  box-shadow: var(--rafvi-shadow);
+}
+
+.rafvi-usecase-card__title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--rafvi-text);
+  margin: 0 0 14px;
+}
+
+.rafvi-usecase-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.rafvi-usecase-card li {
+  font-size: 1.45rem;
+  color: var(--rafvi-text-secondary);
+  padding-left: 22px;
+  position: relative;
+}
+
+.rafvi-usecase-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rafvi-electric);
+}
+
+/* FAQ accordion */
+.rafvi-faq {
+  max-width: 820px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.rafvi-faq-item {
+  border: 1px solid var(--rafvi-border);
+  border-radius: var(--rafvi-radius-md);
+  background: #fff;
+  padding: 4px 24px;
+}
+
+.rafvi-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--rafvi-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rafvi-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.rafvi-faq-item summary::after {
+  content: '+';
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--rafvi-blue);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.rafvi-faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.rafvi-faq-item p {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  line-height: 1.65;
+  color: var(--rafvi-text-secondary);
+}
+
+/* Final CTA */
+.rafvi-final-cta {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Reveal animation, respects reduced motion */
+.rafvi-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.rafvi-reveal.rafvi-in-view {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rafvi-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
