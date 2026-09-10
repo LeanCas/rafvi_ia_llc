@@ -60,17 +60,22 @@
     var header = document.querySelector('[data-rafvi-header]');
 
     if (toggle && panel) {
+      var setMenu = function (open) {
+        panel.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.classList.toggle('rafvi-menu-open', open);
+      };
       toggle.addEventListener('click', function () {
-        var isOpen = panel.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        document.body.classList.toggle('rafvi-menu-open', isOpen);
+        setMenu(!panel.classList.contains('is-open'));
       });
       panel.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          panel.classList.remove('is-open');
-          toggle.setAttribute('aria-expanded', 'false');
-          document.body.classList.remove('rafvi-menu-open');
-        });
+        link.addEventListener('click', function () { setMenu(false); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && panel.classList.contains('is-open')) {
+          setMenu(false);
+          toggle.focus();
+        }
       });
     }
 
@@ -117,12 +122,15 @@
   --rafvi-cyan: #14C8F5;
 
   --rafvi-bg: #FFFFFF;
-  --rafvi-bg-soft: #F5FAFF;
+  --rafvi-bg-soft: #F5FAFF;        /* component tint (console bar, inputs) */
+  --rafvi-section-soft: #EDF3FB;   /* section-level alternating ground — deep enough to read */
   --rafvi-blue-soft: #EAF5FF;
 
   --rafvi-text: #0B1525;
-  --rafvi-text-secondary: #66758A;
+  --rafvi-text-secondary: #556579; /* AA on #fff, #EDF3FB and #EAF5FF */
+  --rafvi-text-on-dark: rgba(255, 255, 255, 0.82);
   --rafvi-border: #DCE8F3;
+  --rafvi-error: #C0392B;
 
   --rafvi-radius-xs: 10px;
   --rafvi-radius-sm: 12px;
@@ -147,6 +155,15 @@
 
 /* ---------- Layout primitives ---------- */
 
+/* Dawn's body sets letter-spacing: 0.06rem and line-height ~1.8; neutralise both
+   inside every RAFVI surface so component values are the ones that render. */
+.rafvi-navbar,
+.rafvi-section,
+.rafvi-hero,
+.rafvi-footer {
+  letter-spacing: normal;
+}
+
 .rafvi-section { padding: 112px 0; }
 
 @media screen and (max-width: 989px) {
@@ -169,11 +186,20 @@
 }
 
 .rafvi-bg-white { background: var(--rafvi-bg); }
-.rafvi-bg-soft { background: var(--rafvi-bg-soft); }
+.rafvi-bg-soft { background: var(--rafvi-section-soft); }
 .rafvi-bg-blue-soft { background: var(--rafvi-blue-soft); }
 .rafvi-bg-navy { background: var(--rafvi-navy); color: #fff; }
 .rafvi-bg-blue { background: var(--rafvi-blue); color: #fff; }
 .rafvi-bg-gradient { background: var(--rafvi-gradient); color: #fff; }
+
+/* Hairline where two light sections meet, so the seam is deliberate.
+   Shopify wraps each section in .shopify-section; :has bridges that wrapper. */
+.shopify-section:has(> .rafvi-bg-white, > .rafvi-hero)
+  + .shopify-section:has(> .rafvi-bg-soft) > .rafvi-section,
+.shopify-section:has(> .rafvi-bg-soft)
+  + .shopify-section:has(> .rafvi-bg-white) > .rafvi-section {
+  border-top: 1px solid var(--rafvi-border);
+}
 
 /* ---------- Section header ---------- */
 
@@ -254,9 +280,9 @@
 /* ---------- Type scale ---------- */
 
 .rafvi-title {
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-heading-family);
   font-weight: 800;
-  line-height: 1.06;
+  line-height: 1.05;
   letter-spacing: -0.03em;
   color: var(--rafvi-text);
   margin: 0 0 18px;
@@ -264,11 +290,13 @@
   text-wrap: balance;
 }
 h2.rafvi-title {
+  font-weight: 700;
   font-size: clamp(2.4rem, 2vw + 1.4rem, 3.4rem);
   line-height: 1.12;
   letter-spacing: -0.025em;
 }
 h3.rafvi-title {
+  font-weight: 700;
   font-size: clamp(2rem, 1.2vw + 1.4rem, 2.6rem);
   letter-spacing: -0.02em;
 }
@@ -282,11 +310,16 @@ h3.rafvi-title {
   line-height: 1.6;
   color: var(--rafvi-text-secondary);
   margin: 0;
-  max-width: 56ch;
+  max-width: 58ch;
+  text-wrap: pretty;
 }
 .rafvi-bg-navy .rafvi-subtitle,
 .rafvi-bg-blue .rafvi-subtitle,
-.rafvi-bg-gradient .rafvi-subtitle { color: rgba(255, 255, 255, 0.8); }
+.rafvi-bg-gradient .rafvi-subtitle {
+  color: var(--rafvi-text-on-dark);
+  line-height: 1.66;             /* light-on-dark: a touch more air + tracking */
+  letter-spacing: 0.005em;
+}
 
 /* ---------- CTAs ---------- */
 
@@ -303,7 +336,7 @@ h3.rafvi-title {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-heading-family);
   font-weight: 600;
   font-size: 1.55rem;
   text-decoration: none;
@@ -318,12 +351,12 @@ h3.rafvi-title {
 .rafvi-btn--primary {
   background: var(--rafvi-gradient-button);
   color: #fff;
-  box-shadow: 0 10px 22px rgba(7, 91, 216, 0.26);
+  box-shadow: 0 6px 16px rgba(7, 91, 216, 0.18);
 }
 .rafvi-btn--primary:hover {
   background: var(--rafvi-gradient-button-hover);
   color: #fff;
-  box-shadow: 0 16px 30px rgba(7, 91, 216, 0.32);
+  box-shadow: 0 10px 24px rgba(7, 91, 216, 0.24);
 }
 .rafvi-btn--secondary {
   background: transparent;
@@ -350,21 +383,28 @@ h3.rafvi-title {
 }
 
 .rafvi-microcopy {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--rafvi-text-secondary);
   margin-top: 18px;
 }
 .rafvi-bg-navy .rafvi-microcopy,
 .rafvi-bg-blue .rafvi-microcopy,
-.rafvi-bg-gradient .rafvi-microcopy { color: rgba(255, 255, 255, 0.65); }
+.rafvi-bg-gradient .rafvi-microcopy { color: rgba(255, 255, 255, 0.7); }
 
 .rafvi-btn:focus-visible,
 .rafvi-faq-item summary:focus-visible,
+.rafvi-navbar__toggle:focus-visible,
 a:focus-visible {
   outline: 2px solid var(--rafvi-electric);
   outline-offset: 3px;
   border-radius: 6px;
+}
+.rafvi-bg-navy .rafvi-btn:focus-visible,
+.rafvi-bg-gradient .rafvi-btn:focus-visible,
+.rafvi-bg-navy a:focus-visible,
+.rafvi-bg-gradient a:focus-visible {
+  outline-color: #fff;
 }
 
 /* ---------- Card grid (benefits / capabilities / integrations) ---------- */
@@ -444,11 +484,54 @@ a:focus-visible {
   margin: 0 0 10px;
 }
 .rafvi-card__text {
-  font-size: 1.48rem;
+  font-size: 1.55rem;
   font-weight: 500;
   line-height: 1.62;
   color: var(--rafvi-text-secondary);
   margin: 0;
+  text-wrap: pretty;
+}
+
+/* ---------- Shared structural primitives ---------- */
+
+/* Two-up split used by human-control, demo-form and image-feature. */
+.rafvi-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+@media screen and (max-width: 989px) {
+  .rafvi-columns { grid-template-columns: 1fr; gap: 44px; }
+}
+.rafvi-subtitle--left { text-align: left; margin-left: 0; margin-right: 0; }
+
+/* Pill / chip used by use-cases industries and integrations. */
+.rafvi-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.rafvi-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.45rem;
+  color: var(--rafvi-text);
+  transition: transform 0.2s var(--rafvi-ease), background 0.2s ease, border-color 0.2s ease;
+}
+.rafvi-chip svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--rafvi-blue); }
+.rafvi-chip--light {
+  background: #fff;
+  border: 1px solid var(--rafvi-border);
+  box-shadow: var(--rafvi-shadow-sm);
+}
+.rafvi-chip--light:hover {
+  transform: translateY(-3px);
+  border-color: var(--rafvi-electric);
 }
 
 /* ---------- Per-section tuning (stable section ids) ---------- */
@@ -546,7 +629,7 @@ a:focus-visible {
   text-decoration: none;
 }
 .rafvi-navbar__wordmark {
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-heading-family);
   font-weight: 800;
   font-size: 2rem;
   letter-spacing: -0.02em;
@@ -622,11 +705,19 @@ a:focus-visible {
   justify-content: center;
 }
 
+/* Lock the page behind the open mobile sheet. */
+body.rafvi-menu-open { overflow: hidden; }
+
 @media screen and (max-width: 989px) {
   .rafvi-navbar__links,
   .rafvi-navbar__cta { display: none; }
   .rafvi-navbar__toggle { display: inline-flex; }
   .rafvi-navbar__inner { padding: 16px 20px; }
+}
+@media screen and (min-width: 990px) {
+  /* Never leave the sheet or lock stuck when resizing up from mobile. */
+  .rafvi-navbar__mobile.is-open { display: none; }
+  body.rafvi-menu-open { overflow: visible; }
 }
 {% endstylesheet %}
 

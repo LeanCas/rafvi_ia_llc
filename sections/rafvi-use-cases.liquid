@@ -91,38 +91,13 @@
   transform: rotate(45deg);
 }
 
-.rafvi-chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-}
-.rafvi-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 22px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 1.45rem;
-  transition: transform 0.2s var(--rafvi-ease), background 0.2s ease, border-color 0.2s ease;
-}
-.rafvi-chip--light {
-  background: #fff;
-  border: 1px solid var(--rafvi-border);
-  color: var(--rafvi-text);
-  box-shadow: var(--rafvi-shadow-sm);
-}
-.rafvi-chip--light:hover {
-  transform: translateY(-3px);
-  border-color: var(--rafvi-electric);
-  background: var(--rafvi-bg-soft);
-}
+/* .rafvi-chip / .rafvi-chip-row / .rafvi-chip--light live in the shared system (rafvi-header). */
 
 .rafvi-industries {
   margin-top: 56px;
   text-align: center;
 }
+.rafvi-industries .rafvi-chip-row { justify-content: center; }
 .rafvi-industries__heading {
   font-size: 1.8rem;
   font-weight: 700;

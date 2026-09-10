@@ -61,16 +61,7 @@
 </section>
 
 {% stylesheet %}
-.rafvi-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: center;
-}
-@media screen and (max-width: 989px) {
-  .rafvi-columns { grid-template-columns: 1fr; gap: 44px; }
-}
-.rafvi-subtitle--left { text-align: left; }
+/* .rafvi-columns and .rafvi-subtitle--left live in the shared system (rafvi-header). */
 
 .rafvi-demo-form {
   background: #fff;
@@ -123,7 +114,7 @@
   margin-bottom: 16px;
 }
 .rafvi-demo-form__error {
-  color: #c0392b;
+  color: var(--rafvi-error);
   font-weight: 600;
   margin-bottom: 16px;
 }
