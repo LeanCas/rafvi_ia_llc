@@ -22,9 +22,7 @@
           }
         }
       },
-      "block_order": [
-        "announcement-bar-0"
-      ],
+      "block_order": ["announcement-bar-0"],
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -38,60 +36,20 @@
     "rafvi-header": {
       "type": "rafvi-header",
       "blocks": {
-        "l1": {
-          "type": "link",
-          "settings": {
-            "label": "Producto",
-            "url": "#capacidades"
-          }
-        },
-        "l2": {
-          "type": "link",
-          "settings": {
-            "label": "Soluciones",
-            "url": "#casos-de-uso"
-          }
-        },
-        "l3": {
-          "type": "link",
-          "settings": {
-            "label": "Cómo funciona",
-            "url": "#como-funciona"
-          }
-        },
-        "l4": {
-          "type": "link",
-          "settings": {
-            "label": "Integraciones",
-            "url": "#integraciones"
-          }
-        },
-        "l5": {
-          "type": "link",
-          "settings": {
-            "label": "FAQ",
-            "url": "#faq"
-          }
-        }
+        "l1": { "type": "link", "settings": { "label": "Producto", "url": "#capacidades" } },
+        "l2": { "type": "link", "settings": { "label": "Soluciones", "url": "#casos-de-uso" } },
+        "l3": { "type": "link", "settings": { "label": "Cómo funciona", "url": "#como-funciona" } },
+        "l4": { "type": "link", "settings": { "label": "Integraciones", "url": "#integraciones" } },
+        "l5": { "type": "link", "settings": { "label": "FAQ", "url": "#faq" } }
       },
-      "block_order": [
-        "l1",
-        "l2",
-        "l3",
-        "l4",
-        "l5"
-      ],
+      "block_order": ["l1", "l2", "l3", "l4", "l5"],
       "settings": {
-        "logo": "shopify://shop_images/ChatGPT_Image_9_sept_2026_22_51_26.png",
-        "logo_height": 60,
+        "logo_height": 32,
         "logo_text": "RAFVI IA LLC",
         "cta_label": "Solicitar demo",
         "cta_link": "#solicitar-demo"
       }
     }
   },
-  "order": [
-    "announcement-bar",
-    "rafvi-header"
-  ]
+  "order": ["announcement-bar", "rafvi-header"]
 }
