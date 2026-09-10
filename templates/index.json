@@ -9,39 +9,23 @@
  */
 {
   "sections": {
-    "featured_collection": {
-      "type": "featured-collection",
-      "disabled": true,
+    "rafvi-hero": {
+      "type": "rafvi-hero",
       "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "badge": "Agentes de IA para empresas",
+        "heading": "Automatizá conversaciones. Escalá tu empresa.",
+        "text": "RAFVI conecta agentes de inteligencia artificial con llamadas, correos y mensajes para que tu empresa pueda responder más rápido, atender más clientes y operar 24/7.",
+        "primary_cta_label": "Solicitar demo",
+        "primary_cta_link": "",
+        "secondary_cta_label": "Ver cómo funciona",
+        "secondary_cta_link": "",
+        "microcopy": "Automatización personalizada para los canales y procesos de tu empresa."
       }
     },
-    "rafvi_benefits_Fp6phx": {
+    "rafvi-benefits": {
       "type": "rafvi-benefits",
       "blocks": {
-        "benefit_mqxGhb": {
+        "b1": {
           "type": "benefit",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 3\"></path></svg>",
@@ -49,7 +33,7 @@
             "text": "Respondé consultas incluso cuando tu equipo no está disponible."
           }
         },
-        "benefit_LKcFmz": {
+        "b2": {
           "type": "benefit",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M13 2 3 14h7l-1 8 10-12h-7z\"></path></svg>",
@@ -57,7 +41,7 @@
             "text": "Reducí tiempos de espera y mantené conversaciones activas con tus clientes."
           }
         },
-        "benefit_HEMTmY": {
+        "b3": {
           "type": "benefit",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 3v18h18\"></path><path d=\"M7 15l4-4 3 3 5-6\"></path></svg>",
@@ -65,7 +49,7 @@
             "text": "Atendé más contactos sin aumentar proporcionalmente el tamaño del equipo."
           }
         },
-        "benefit_8zPmni": {
+        "b4": {
           "type": "benefit",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M9 12l2 2 4-4\"></path><circle cx=\"12\" cy=\"12\" r=\"9\"></circle></svg>",
@@ -73,7 +57,7 @@
             "text": "Mantené respuestas alineadas con las reglas, procesos y tono de tu empresa."
           }
         },
-        "benefit_4ifNKJ": {
+        "b5": {
           "type": "benefit",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M17 2.1l4 4-4 4\"></path><path d=\"M3 12.2v-2a4 4 0 0 1 4-4h14\"></path><path d=\"M7 21.9l-4-4 4-4\"></path><path d=\"M21 11.8v2a4 4 0 0 1-4 4H3\"></path></svg>",
@@ -81,7 +65,7 @@
             "text": "Automatizá preguntas frecuentes, seguimientos y procesos operativos."
           }
         },
-        "benefit_ai8xgP": {
+        "b6": {
           "type": "benefit",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z\"></path></svg>",
@@ -91,23 +75,22 @@
         }
       },
       "block_order": [
-        "benefit_mqxGhb",
-        "benefit_LKcFmz",
-        "benefit_HEMTmY",
-        "benefit_8zPmni",
-        "benefit_4ifNKJ",
-        "benefit_ai8xgP"
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
       ],
-      "name": "RAFVI · Beneficios",
       "settings": {
         "heading": "Más conversaciones atendidas. Menos trabajo repetitivo.",
         "subheading": "Automatizá las interacciones que consumen tiempo y dejá a tu equipo ocuparse de lo que realmente necesita criterio humano."
       }
     },
-    "rafvi_capabilities_z7BgKH": {
+    "rafvi-capabilities": {
       "type": "rafvi-capabilities",
       "blocks": {
-        "capability_i8NXBx": {
+        "c1": {
           "type": "capability",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z\"></path></svg>",
@@ -115,7 +98,7 @@
             "text": "Atendé consultas, calificá contactos, derivá llamadas y automatizá tareas telefónicas."
           }
         },
-        "capability_ALJbFH": {
+        "c2": {
           "type": "capability",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16v16H4z\"></path><path d=\"m22 6-10 7L2 6\"></path></svg>",
@@ -123,7 +106,7 @@
             "text": "Interpretá correos entrantes y respondé según el contexto, las reglas y la información de tu empresa."
           }
         },
-        "capability_TeEGp7": {
+        "c3": {
           "type": "capability",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\"></path></svg>",
@@ -131,7 +114,7 @@
             "text": "Automatizá conversaciones por chat y canales de mensajería desde un mismo sistema."
           }
         },
-        "capability_pciwTk": {
+        "c4": {
           "type": "capability",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 3v18h18\"></path><path d=\"M7 15l4-4 3 3 5-6\"></path></svg>",
@@ -139,7 +122,7 @@
             "text": "Mantené el contacto con leads y oportunidades sin depender de seguimientos manuales."
           }
         },
-        "capability_4GqQit": {
+        "c5": {
           "type": "capability",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"></rect><path d=\"M16 2v4M8 2v4M3 10h18\"></path></svg>",
@@ -147,7 +130,7 @@
             "text": "Coordiná reuniones, reservas o turnos automáticamente."
           }
         },
-        "capability_4UyC8W": {
+        "c6": {
           "type": "capability",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg>",
@@ -157,112 +140,56 @@
         }
       },
       "block_order": [
-        "capability_i8NXBx",
-        "capability_ALJbFH",
-        "capability_TeEGp7",
-        "capability_pciwTk",
-        "capability_4GqQit",
-        "capability_4UyC8W"
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
       ],
-      "name": "RAFVI · Capacidades",
       "settings": {
         "heading": "Un agente de IA para cada conversación",
         "subheading": "Desde una llamada hasta un correo o un mensaje, RAFVI ayuda a mantener tu operación activa y tus clientes atendidos."
       }
     },
-    "rafvi_human_control_cacNJw": {
-      "type": "rafvi-human-control",
-      "blocks": {
-        "item_HYXnyy": {
-          "type": "item",
-          "settings": {
-            "label": "Tono de voz personalizado"
-          }
-        },
-        "item_GLgMYX": {
-          "type": "item",
-          "settings": {
-            "label": "Reglas de negocio"
-          }
-        },
-        "item_jFBX8A": {
-          "type": "item",
-          "settings": {
-            "label": "Reglas de escalamiento"
-          }
-        },
-        "item_wKhiAX": {
-          "type": "item",
-          "settings": {
-            "label": "Horarios de atención"
-          }
-        },
-        "item_JqmKqE": {
-          "type": "item",
-          "settings": {
-            "label": "Fuentes de conocimiento"
-          }
-        },
-        "item_HB7DzL": {
-          "type": "item",
-          "settings": {
-            "label": "Acciones permitidas y restringidas"
-          }
-        },
-        "item_zaHywG": {
-          "type": "item",
-          "settings": {
-            "label": "Derivación a un humano"
-          }
-        },
-        "item_xUTV7f": {
-          "type": "item",
-          "settings": {
-            "label": "Historial de conversaciones"
-          }
-        }
-      },
-      "block_order": [
-        "item_HYXnyy",
-        "item_GLgMYX",
-        "item_jFBX8A",
-        "item_wKhiAX",
-        "item_JqmKqE",
-        "item_HB7DzL",
-        "item_zaHywG",
-        "item_xUTV7f"
-      ],
-      "name": "RAFVI · Control humano",
+    "rafvi-image-feature": {
+      "type": "rafvi-image-feature",
       "settings": {
-        "heading": "Automatización sin perder el control",
-        "text": "Definí cómo responde tu agente, qué información puede utilizar y cuándo debe intervenir una persona."
+        "background": "soft",
+        "image_position": "right",
+        "image": "shopify://shop_images/ChatGPT_Image_9_sept_2026_23_16_54.png",
+        "eyebrow": "RAFVI en acción",
+        "heading": "Así se ve tu operación con RAFVI",
+        "text": "Sumá una imagen de tu producto, tu equipo o tu operación para mostrarle a tus clientes cómo trabaja RAFVI junto a tu empresa.",
+        "cta_label": "",
+        "cta_link": ""
       }
     },
-    "rafvi_how_it_works_x8EVDz": {
+    "rafvi-how-it-works": {
       "type": "rafvi-how-it-works",
       "blocks": {
-        "step_XHt4zW": {
+        "s1": {
           "type": "step",
           "settings": {
             "title": "Conectá",
             "text": "Integrá los canales y herramientas que usa tu empresa."
           }
         },
-        "step_UU3DM6": {
+        "s2": {
           "type": "step",
           "settings": {
             "title": "Configurá",
             "text": "Definí información, reglas, tono y objetivos para el agente."
           }
         },
-        "step_edTajR": {
+        "s3": {
           "type": "step",
           "settings": {
             "title": "Automatizá",
             "text": "RAFVI conversa con clientes y ejecuta tareas automáticamente."
           }
         },
-        "step_TQzGwf": {
+        "s4": {
           "type": "step",
           "settings": {
             "title": "Supervisá",
@@ -271,63 +198,351 @@
         }
       },
       "block_order": [
-        "step_XHt4zW",
-        "step_UU3DM6",
-        "step_edTajR",
-        "step_TQzGwf"
+        "s1",
+        "s2",
+        "s3",
+        "s4"
       ],
-      "name": "RAFVI · Cómo funciona",
       "settings": {
         "heading": "De tus canales a un agente inteligente en pocos pasos",
         "subheading": "Conectá tu operación, definí las reglas y dejá que RAFVI automatice las conversaciones repetitivas mientras tu equipo mantiene el control."
       }
     },
-    "rafvi_security_PA7Rqx": {
+    "rafvi-omnichannel": {
+      "type": "rafvi-omnichannel",
+      "blocks": {
+        "ch1": {
+          "type": "channel",
+          "settings": {
+            "label": "Teléfono"
+          }
+        },
+        "ch2": {
+          "type": "channel",
+          "settings": {
+            "label": "Email"
+          }
+        },
+        "ch3": {
+          "type": "channel",
+          "settings": {
+            "label": "WhatsApp"
+          }
+        },
+        "ch4": {
+          "type": "channel",
+          "settings": {
+            "label": "Web Chat"
+          }
+        },
+        "ch5": {
+          "type": "channel",
+          "settings": {
+            "label": "SMS"
+          }
+        },
+        "ch6": {
+          "type": "channel",
+          "settings": {
+            "label": "CRM"
+          }
+        }
+      },
+      "block_order": [
+        "ch1",
+        "ch2",
+        "ch3",
+        "ch4",
+        "ch5",
+        "ch6"
+      ],
+      "settings": {
+        "heading": "Una sola inteligencia. Múltiples canales.",
+        "subheading": "Centralizá llamadas, correos y mensajes en una experiencia coherente para tu empresa y tus clientes."
+      }
+    },
+    "rafvi-use-cases": {
+      "type": "rafvi-use-cases",
+      "blocks": {
+        "u1": {
+          "type": "use_case",
+          "settings": {
+            "title": "Ventas",
+            "items": "Calificación de leads\nContacto inicial\nSeguimiento\nAgendamiento"
+          }
+        },
+        "u2": {
+          "type": "use_case",
+          "settings": {
+            "title": "Soporte al cliente",
+            "items": "Preguntas frecuentes\nEstado de pedidos o solicitudes\nEscalamiento\nEntrega de información"
+          }
+        },
+        "u3": {
+          "type": "use_case",
+          "settings": {
+            "title": "Recepción",
+            "items": "Atención de llamadas\nCoordinación de turnos\nConsultas generales"
+          }
+        },
+        "u4": {
+          "type": "use_case",
+          "settings": {
+            "title": "Cobranzas",
+            "items": "Recordatorios de pago\nSeguimiento\nNotificaciones a clientes"
+          }
+        },
+        "u5": {
+          "type": "use_case",
+          "settings": {
+            "title": "Operaciones internas",
+            "items": "Flujos de comunicación repetitivos\nNotificaciones\nRuteo de información"
+          }
+        },
+        "i1": {
+          "type": "industry",
+          "settings": {
+            "label": "Ecommerce"
+          }
+        },
+        "i2": {
+          "type": "industry",
+          "settings": {
+            "label": "Clínicas"
+          }
+        },
+        "i3": {
+          "type": "industry",
+          "settings": {
+            "label": "Inmobiliarias"
+          }
+        },
+        "i4": {
+          "type": "industry",
+          "settings": {
+            "label": "Estudios profesionales"
+          }
+        },
+        "i5": {
+          "type": "industry",
+          "settings": {
+            "label": "Restaurantes"
+          }
+        },
+        "i6": {
+          "type": "industry",
+          "settings": {
+            "label": "Servicios"
+          }
+        },
+        "i7": {
+          "type": "industry",
+          "settings": {
+            "label": "Concesionarias"
+          }
+        }
+      },
+      "block_order": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5",
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5",
+        "i6",
+        "i7"
+      ],
+      "settings": {
+        "heading": "Automatización que se adapta a tu operación",
+        "subheading": "",
+        "industries_heading": "Diseñado para empresas donde cada conversación importa."
+      }
+    },
+    "rafvi-human-control": {
+      "type": "rafvi-human-control",
+      "blocks": {
+        "h1": {
+          "type": "item",
+          "settings": {
+            "label": "Tono de voz personalizado"
+          }
+        },
+        "h2": {
+          "type": "item",
+          "settings": {
+            "label": "Reglas de negocio"
+          }
+        },
+        "h3": {
+          "type": "item",
+          "settings": {
+            "label": "Reglas de escalamiento"
+          }
+        },
+        "h4": {
+          "type": "item",
+          "settings": {
+            "label": "Horarios de atención"
+          }
+        },
+        "h5": {
+          "type": "item",
+          "settings": {
+            "label": "Fuentes de conocimiento"
+          }
+        },
+        "h6": {
+          "type": "item",
+          "settings": {
+            "label": "Acciones permitidas y restringidas"
+          }
+        },
+        "h7": {
+          "type": "item",
+          "settings": {
+            "label": "Derivación a un humano"
+          }
+        },
+        "h8": {
+          "type": "item",
+          "settings": {
+            "label": "Historial de conversaciones"
+          }
+        }
+      },
+      "block_order": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "h7",
+        "h8"
+      ],
+      "settings": {
+        "heading": "Automatización sin perder el control",
+        "text": "Definí cómo responde tu agente, qué información puede utilizar y cuándo debe intervenir una persona."
+      }
+    },
+    "rafvi-integrations": {
+      "type": "rafvi-integrations",
+      "blocks": {
+        "in1": {
+          "type": "category",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\"></path></svg>",
+            "title": "Mensajería"
+          }
+        },
+        "in2": {
+          "type": "category",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16v16H4z\"></path><path d=\"m22 6-10 7L2 6\"></path></svg>",
+            "title": "Email"
+          }
+        },
+        "in3": {
+          "type": "category",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"></rect><path d=\"M16 2v4M8 2v4M3 10h18\"></path></svg>",
+            "title": "Calendario"
+          }
+        },
+        "in4": {
+          "type": "category",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"7\" r=\"4\"></circle><path d=\"M5.5 21a6.5 6.5 0 0 1 13 0\"></path></svg>",
+            "title": "CRM"
+          }
+        },
+        "in5": {
+          "type": "category",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"9\" cy=\"21\" r=\"1\"></circle><circle cx=\"20\" cy=\"21\" r=\"1\"></circle><path d=\"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6\"></path></svg>",
+            "title": "Ecommerce"
+          }
+        },
+        "in6": {
+          "type": "category",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16\"></path></svg>",
+            "title": "APIs"
+          }
+        },
+        "in7": {
+          "type": "category",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\"></rect><path d=\"M9 9h6v6H9z\"></path></svg>",
+            "title": "Sistemas internos"
+          }
+        }
+      },
+      "block_order": [
+        "in1",
+        "in2",
+        "in3",
+        "in4",
+        "in5",
+        "in6",
+        "in7"
+      ],
+      "settings": {
+        "heading": "Conectado con tu operación",
+        "subheading": "",
+        "footnote": "RAFVI puede adaptarse a los canales, herramientas y procesos que ya forman parte de tu empresa."
+      }
+    },
+    "rafvi-security": {
       "type": "rafvi-security",
       "blocks": {
-        "topic_qkHeTW": {
+        "sec1": {
           "type": "topic",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\"></rect><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"></path></svg>",
             "label": "Acceso controlado"
           }
         },
-        "topic_X7YNfk": {
+        "sec2": {
           "type": "topic",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6z\"></path></svg>",
             "label": "Permisos configurables"
           }
         },
-        "topic_m6qRqP": {
+        "sec3": {
           "type": "topic",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 3\"></path></svg>",
             "label": "Historial de conversaciones"
           }
         },
-        "topic_U3TiyP": {
+        "sec4": {
           "type": "topic",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"3\"></rect><path d=\"m9 12 2 2 4-4\"></path></svg>",
             "label": "Infraestructura segura"
           }
         },
-        "topic_g4mzUh": {
+        "sec5": {
           "type": "topic",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16v16H4z\"></path><path d=\"M8 9h8M8 13h8M8 17h5\"></path></svg>",
             "label": "Reglas de negocio"
           }
         },
-        "topic_dwHjtW": {
+        "sec6": {
           "type": "topic",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6z\"></path><path d=\"M9.5 12l1.8 1.8L15 10\"></path></svg>",
             "label": "Protección de datos"
           }
         },
-        "topic_UykdnY": {
+        "sec7": {
           "type": "topic",
           "settings": {
             "icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"8\" r=\"4\"></circle><path d=\"M4 21a8 8 0 0 1 16 0\"></path></svg>",
@@ -336,129 +551,73 @@
         }
       },
       "block_order": [
-        "topic_qkHeTW",
-        "topic_X7YNfk",
-        "topic_m6qRqP",
-        "topic_U3TiyP",
-        "topic_g4mzUh",
-        "topic_dwHjtW",
-        "topic_UykdnY"
+        "sec1",
+        "sec2",
+        "sec3",
+        "sec4",
+        "sec5",
+        "sec6",
+        "sec7"
       ],
-      "name": "RAFVI · Seguridad",
       "settings": {
         "heading": "IA para empresas, con control y seguridad",
         "subheading": "Diseñá reglas, permisos y flujos claros para mantener cada automatización alineada con tu operación."
       }
     },
-    "rafvi_omnichannel_cNEVe7": {
-      "type": "rafvi-omnichannel",
-      "blocks": {
-        "channel_qEBXcp": {
-          "type": "channel",
-          "settings": {
-            "label": "Teléfono"
-          }
-        },
-        "channel_TtDhMc": {
-          "type": "channel",
-          "settings": {
-            "label": "Email"
-          }
-        },
-        "channel_xTVxYy": {
-          "type": "channel",
-          "settings": {
-            "label": "WhatsApp"
-          }
-        },
-        "channel_W4XJA9": {
-          "type": "channel",
-          "settings": {
-            "label": "Web Chat"
-          }
-        },
-        "channel_Mep4gV": {
-          "type": "channel",
-          "settings": {
-            "label": "SMS"
-          }
-        },
-        "channel_dETfXg": {
-          "type": "channel",
-          "settings": {
-            "label": "CRM"
-          }
-        }
-      },
-      "block_order": [
-        "channel_qEBXcp",
-        "channel_TtDhMc",
-        "channel_xTVxYy",
-        "channel_W4XJA9",
-        "channel_Mep4gV",
-        "channel_dETfXg"
-      ],
-      "name": "RAFVI · Omnicanal",
-      "settings": {
-        "heading": "Una sola inteligencia. Múltiples canales.",
-        "subheading": "Centralizá llamadas, correos y mensajes en una experiencia coherente para tu empresa y tus clientes."
-      }
-    },
-    "rafvi_demo_form_nG3Wf4": {
+    "rafvi-demo-form": {
       "type": "rafvi-demo-form",
-      "name": "RAFVI · Solicitar demo",
       "settings": {
         "heading": "Solicitá una demo personalizada",
         "text": "Contanos sobre tu empresa y te mostramos cómo un agente RAFVI puede automatizar tus llamadas, correos y mensajes.",
         "submit_label": "Solicitar demo"
       }
     },
-    "rafvi_faq_xMijxF": {
+    "rafvi-faq": {
       "type": "rafvi-faq",
       "blocks": {
-        "question_Cmn6Ve": {
+        "q1": {
           "type": "question",
           "settings": {
             "question": "¿Qué puede automatizar RAFVI?",
             "answer": "RAFVI puede ayudar a automatizar conversaciones y tareas relacionadas con llamadas, correos, mensajes, seguimiento, soporte y coordinación."
           }
         },
-        "question_wYBgmB": {
+        "q2": {
           "type": "question",
           "settings": {
             "question": "¿Puede derivar una conversación a una persona?",
             "answer": "Sí. El sistema puede diseñarse para escalar conversaciones cuando se necesita intervención humana."
           }
         },
-        "question_MykRfN": {
+        "q3": {
           "type": "question",
           "settings": {
             "question": "¿Puede usar información de mi empresa?",
             "answer": "El agente puede configurarse utilizando información, procesos y reglas autorizadas por la empresa."
           }
         },
-        "question_tW678g": {
+        "q4": {
           "type": "question",
           "settings": {
             "question": "¿Puede trabajar fuera de horario?",
             "answer": "Sí. Uno de los principales beneficios de los agentes automatizados es poder responder de forma continua."
           }
         },
-        "question_m3a43j": {
+        "q5": {
           "type": "question",
           "settings": {
             "question": "¿Se puede personalizar el tono de las respuestas?",
             "answer": "Sí. La comunicación puede configurarse para alinearse con la identidad y forma de atención de la empresa."
           }
         },
-        "question_HH3jmW": {
+        "q6": {
           "type": "question",
           "settings": {
             "question": "¿Se integra con mi CRM o herramientas actuales?",
             "answer": "Las integraciones dependerán del sistema utilizado y del alcance de implementación."
           }
         },
-        "question_VVJh9a": {
+        "q7": {
           "type": "question",
           "settings": {
             "question": "¿Cuánto tarda una implementación?",
@@ -467,29 +626,43 @@
         }
       },
       "block_order": [
-        "question_Cmn6Ve",
-        "question_wYBgmB",
-        "question_MykRfN",
-        "question_tW678g",
-        "question_m3a43j",
-        "question_HH3jmW",
-        "question_VVJh9a"
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
       ],
-      "name": "RAFVI · FAQ",
       "settings": {
         "heading": "Preguntas frecuentes"
+      }
+    },
+    "rafvi-final-cta": {
+      "type": "rafvi-final-cta",
+      "settings": {
+        "heading": "Tu empresa no debería dejar conversaciones sin responder.",
+        "text": "Descubrí cómo RAFVI puede automatizar atención, seguimiento y comunicación sin perder el control de la experiencia.",
+        "primary_cta_label": "Solicitar demo",
+        "primary_cta_link": "",
+        "secondary_cta_label": "Hablar con RAFVI",
+        "secondary_cta_link": ""
       }
     }
   },
   "order": [
-    "featured_collection",
-    "rafvi_benefits_Fp6phx",
-    "rafvi_capabilities_z7BgKH",
-    "rafvi_human_control_cacNJw",
-    "rafvi_how_it_works_x8EVDz",
-    "rafvi_security_PA7Rqx",
-    "rafvi_omnichannel_cNEVe7",
-    "rafvi_demo_form_nG3Wf4",
-    "rafvi_faq_xMijxF"
+    "rafvi-hero",
+    "rafvi-benefits",
+    "rafvi-capabilities",
+    "rafvi-image-feature",
+    "rafvi-how-it-works",
+    "rafvi-omnichannel",
+    "rafvi-use-cases",
+    "rafvi-human-control",
+    "rafvi-integrations",
+    "rafvi-security",
+    "rafvi-demo-form",
+    "rafvi-faq",
+    "rafvi-final-cta"
   ]
 }
